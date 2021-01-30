@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  color: white;
+  background-color: #7e7f81;
+  padding: 20px;
+}
+
+.App-header {
+  background-color: #7e7f81;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Login-container{
+  width: 50%;
+  margin: 0 25%;
+}
+
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 0.8rem;
+}
+
+button:disabled{
+  cursor: not-allowed;
+}
+
+.fa-sign-out-alt{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.Task-List{
+  text-align: center;
+}
+
+.Task-Item{
+  padding: 80px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.Icons{
+  cursor: pointer;
+}
+
+.addTaskComponent{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.p-login-register{
+  font-size: 13px;
+}
+
+.Logout_NewTask_Nav{
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+}
+
+.addTaskButton{
+  right: 0px;
+}
+
+.card-body{
+  background-color: rgb(53, 49, 49);
+  border-color: black;
+  color: black;
+}
