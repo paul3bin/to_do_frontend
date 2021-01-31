@@ -1,7 +1,7 @@
 export class API{
     static loginUser(body){
         return fetch(
-            `http://127.0.0.1:8000/api/authenticate/`, 
+            `https://todo-django-rest-framework.herokuapp.com/api/authenticate/`, 
             {
                 method: 'POST',
                 headers: {
@@ -14,7 +14,7 @@ export class API{
 
     static registerUser(body){
         return fetch(
-            `http://127.0.0.1:8000/api/users/`, 
+            `https://todo-django-rest-framework.herokuapp.com/api/users/`, 
             {
                 method: 'POST',
                 headers: {
@@ -27,7 +27,7 @@ export class API{
 
     static getTasks(token){
         return fetch(
-            "http://127.0.0.1:8000/api/task/",
+            "https://todo-django-rest-framework.herokuapp.com/api/task/",
             {
                 method: 'GET',
                 headers: {
@@ -39,7 +39,7 @@ export class API{
     }
 
     static deleteTask(task_id, token){
-        return fetch(`http://127.0.0.1:8000/api/task/${task_id}/`, {
+        return fetch(`https://todo-django-rest-framework.herokuapp.com/api/task/${task_id}/`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ export class API{
     }
 
     static addTask(body, token){
-        return fetch(`http://127.0.0.1:8000/api/task/`, {
+        return fetch(`https://todo-django-rest-framework.herokuapp.com/api/task/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
