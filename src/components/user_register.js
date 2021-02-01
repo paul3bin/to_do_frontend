@@ -31,28 +31,36 @@ function RegisterUser(){
     }
 
     return (
-        <div className='App'>
-            <header className='App-header'>
-                <h1>Register</h1>
-                <div class="mb-3">
-                    <input id='UserName' type='text' className="form-control" placeholder='Enter Username' value={username} 
-                        onChange={evnt => setUsername(evnt.target.value)}/>
-                </div>
-                <div class="mb-3">
-                    <input id='password' type='password' className="form-control" placeholder='Enter Password' value={password} 
-                        onChange={evnt => setPassword(evnt.target.value)}/>
-                </div>
+        <div className='login-body'>
+            <div className='container-fluid'>
+                <div className='row justify-content-center'>
+                    <div className='col-12 col-sm-6 col-md-3'>
+                    <form className='form-container'>
+                        
+                        <h4 className='text-center fw-bold fst-italic'>Register</h4>
+                        
+                        <div class="form-group">
+                            <input id='UserName' type='text' className="form-control" placeholder='Enter Username' value={username} 
+                            onChange={evnt => setUsername(evnt.target.value)}/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder='Enter password' 
+                            value={password} onChange={evnt => setPassword(evnt.target.value)}/>
+                        </div>
 
-                <div class="mb-3">
-                    <input id='password_reEnter' type='password' className="form-control" placeholder='Re-enter Password' value={passwordReEnter} 
-                        onChange={evnt => setPasswordReEnter(evnt.target.value)}/>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password_reEnter" placeholder='Re-enter Password' 
+                            value={password} onChange={evnt => setPassword(evnt.target.value)}/>
+                        </div>
+  
+                        <button disabled={isDisabled} type="submit" class="btn btn-primary btn-block" onClick={registerClicked}>Register</button>
+
+                        <p className='p-login-register'>Already have an account? Login <Link to="/">here</Link>.</p> 
+                    </form>
+                    </div>
                 </div>
-
-                <button disabled={isDisabled} className='btn btn-outline-primary Login-items' 
-                onClick={registerClicked}>Create Account</button>
-
-                <p className='p-login-register'>Already have an account? Login <Link to="/">here</Link>.</p> 
-            </header>
+            </div>
         </div>
     )
 }
