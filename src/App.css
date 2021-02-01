@@ -78,3 +78,20 @@ button:disabled{
   border-color: black;
   color: black;
 }
+
+.login-body{
+  background-color: coral;
+  padding-top: 25vh;
+  min-height: 100vh;
+}
+
+form{
+  background-color: white;
+  /* min-height: 100vh; */
+}
+
+.form-container{
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 0px;
+}
