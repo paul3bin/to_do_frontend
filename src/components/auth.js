@@ -5,7 +5,6 @@ import {Link, withRouter} from 'react-router-dom';
 import { API } from '../api-service';
 import {RegisterUser} from '../components/user_register';
 
-
 function Auth(){
 
     document.title = 'Login';
@@ -43,27 +42,29 @@ function Auth(){
     }, [token])
 
     return (
-        <div className='App'>
-            <header className='App-header'>
-                <div className="card">
-                    <div class="card-body">
-                        <h1>Login</h1>  
-                        <div class="mb-3">
-                            <input id='UserName' type='text' className="form-control" placeholder='Username' value={username} 
-                                onChange={evnt => setUsername(evnt.target.value)}/>
+        <div className='login-body'>
+            <div className='container-fluid'>
+                <div className='row justify-content-center'>
+                    <div className='col-12 col-sm-6 col-md-3'>
+                    <form className='form-container'>
+                        <h4 className='text-center fw-bold fst-italic'>Login</h4>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder='Enter username'
+                            value={username} onChange={evnt => setUsername(evnt.target.value)}/>
                         </div>
-                        <div class="mb-3">
-                            <input id='password' type='password' className="form-control" placeholder='Password' value={password} 
-                            onChange={evnt => setPassword(evnt.target.value)}/>
+                        
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder='Enter password' 
+                            value={password} onChange={evnt => setPassword(evnt.target.value)}/>
                         </div>
+  
+                        <button disabled={isDisabled} type="submit" class="btn btn-primary btn-block" onClick={loginClicked}>Submit</button>
 
-                        <button disabled={isDisabled} className='btn btn-outline-primary Login-items' 
-                            onClick={loginClicked}>Login</button>
-
-                        <p className='p-login-register'>Don't have an account? Register <Link to="/register-user">here</Link>.</p> 
+                        <p className='p-login-register'>Don't have an account? Register <Link to="/register-user">here</Link>.</p>
+                    </form>
                     </div>
                 </div>
-            </header>
+            </div>
         </div>
     )
 }
