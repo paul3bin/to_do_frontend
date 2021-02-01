@@ -51,7 +51,7 @@ function RegisterUser(){
 
                         <div class="form-group">
                             <input type="password" class="form-control" id="password_reEnter" placeholder='Re-enter Password' 
-                            value={password} onChange={evnt => setPassword(evnt.target.value)}/>
+                            value={passwordReEnter} onChange={evnt => setPasswordReEnter(evnt.target.value)}/>
                         </div>
   
                         <button disabled={isDisabled} type="submit" class="btn btn-primary btn-block" onClick={registerClicked}>Register</button>
