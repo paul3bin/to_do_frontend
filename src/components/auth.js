@@ -20,6 +20,7 @@ function Auth(){
     const [userID, setUserID] = useCookies(['id']);
 
     const loginClicked = () => {
+
         API.loginUser({username, password})
         .then(resp => setToken('token', resp.token))
         .catch(error => console.log(error))
