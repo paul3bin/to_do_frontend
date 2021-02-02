@@ -21,7 +21,7 @@ function TasksList(props){
               return (
                   <div key={task.id} className='Task-Item'>
                       <h2>{task.task}</h2>
-                      <p>{task.date.slice(0,10)}</p>
+                      <p>{task.date.slice(0,10).split("-").reverse().join("/")}</p>
                       <FontAwesomeIcon icon={faTrash} onClick={() => removeTask(task)} className="Icons"/>
                   </div>
               )
