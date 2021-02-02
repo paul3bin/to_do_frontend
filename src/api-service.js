@@ -9,7 +9,7 @@ export class API{
                 },
                 body: JSON.stringify(body)
             }
-        ).then( resp => resp.json())
+        ).then(resp => resp.json())
     }
 
     static registerUser(body){
