@@ -13,7 +13,7 @@ function RegisterUser(){
 
     const [passwordReEnter, setPasswordReEnter] = useState('');
 
-    const isDisabled = username.length===0||password.length===0 || passwordReEnter.length===0;
+    const isDisabled = username.length===0 || password.length===0 || passwordReEnter.length===0;
 
     const passwordCheck = () =>{
         return (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password))
@@ -24,10 +24,16 @@ function RegisterUser(){
     }
 
     const registerClicked = () => {
-        API.registerUser({username, password})
-        .catch(error => console.log(error))
-        alert('New user registered. Now, login with the same credentials.')
-        window.location.href = '/'
+        if (passwordCheck && passwordReEnterCheck){
+            API.registerUser({username, password})
+            .catch(error => console.log(error))
+            alert('New user registered. Now, login with the same credentials.')
+            window.location.href = '/'
+        }
+
+        else{
+            alert('Check your password and try again.')
+        }
     }
 
     return (
