@@ -49,7 +49,7 @@ function Auth(){
                     <form className='form-container'>
                         <h4 className='text-center fw-bold fst-italic'>Login</h4>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder='Enter username'
+                            <input type="email" class="form-control" id="username" placeholder='Enter username'
                             value={username} onChange={evnt => setUsername(evnt.target.value)}/>
                         </div>
                         
