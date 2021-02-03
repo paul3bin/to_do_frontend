@@ -1,59 +1,4 @@
-.App {
-  text-align: center;
-  min-height: 100vh;
-  color: white;
-  background-color: #7e7f81;
-  padding: 20px;
-}
-
-.App-header {
-  background-color: #7e7f81;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-input, textarea{
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  font-size: 0.8rem;
-}
-
-button:disabled{
-  cursor: not-allowed;
-}
-
-.fa-sign-out-alt{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.Task-List{
-  text-align: center;
-}
-
-.Task-Item{
-  padding: 80px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-.Icons{
-  cursor: pointer;
-}
-
-.addTaskComponent{
-  display: grid;
-  grid-template-columns: auto auto;
-}
+/* Login and Register Page CSS */
 .p-login-register{
   font-size: 13px;
 }
@@ -82,4 +27,102 @@ form{
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0px 0px 10px 0px;
+}
+
+button:disabled{
+  cursor: not-allowed;
+}
+
+/* Landing Page CSS */
+
+.fa-sign-out-alt{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.Task-Item{
+  background-color: burlywood;
+  height: 50px;
+  margin: 20px auto;
+  width: 300px;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-radius: 5px;
+}
+
+.Task-Item p{
+  padding: 13px;
+  margin-left: 10px;
+}
+
+.Icons{
+  cursor: pointer;
+  margin: 15px;
+  margin-left: 10px;
+}
+
+.addTaskComponent{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.navbar{
+  border-radius: 10px;
+}
+
+body{
+  background-color: rgb(61, 56, 47);
+}
+
+.App{
+  background-color:rgb(60, 64, 116);
+  min-height: 500px;
+  width: 400px;
+  margin: 66px auto;
+  border-radius: 10px;
+}
+
+.todo-form{
+  background-color:rgb(60, 64, 116);
+  border-radius: 10px;
+}
+
+.todo-form input{
+  background-color: rgb(26, 22, 22);
+  color:white;
+  border: 0px;
+  width: 200px;
+  height: 50px;
+  padding: 0px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  font-size:18px;
+  font-family:cursive;
+}
+
+.todo-form input:focus, .todo-form button:focus{
+  outline: none;
+}
+
+.todo-form button{
+  height: 50px;
+  width: 80px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: rgb(202, 156, 24);
+  cursor: pointer;
+  color: white;
+}
+
+.navbar{
+  margin: 10px 10px;
+  background-color:rgb(60, 64, 116);
+}
+
+.logout{
+  cursor: pointer;
 }
