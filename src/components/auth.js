@@ -3,7 +3,6 @@ import { useCookies } from 'react-cookie';
 import {Link, withRouter} from 'react-router-dom';
 
 import { API } from '../api-service';
-import {RegisterUser} from '../components/user_register';
 
 function Auth(){
 
@@ -48,7 +47,7 @@ function Auth(){
                 <div className='row justify-content-center'>
                     <div className='col-12 col-sm-6 col-md-3'>
                     <form className='form-container'>
-                        <h4 className='text-center fw-bold fst-italic'>Login</h4>
+                        <h4 className='text-center fw-bold'>Login</h4>
                         <div class="form-group">
                             <input type="email" class="form-control" id="username" placeholder='Enter username'
                             value={username} onChange={evnt => setUsername(evnt.target.value)}/>
