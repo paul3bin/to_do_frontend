@@ -54,22 +54,26 @@ function App() {
   }
   
   return (
-    <div className="App">
-      <nav className="navbar navbar-dark bg-dark">
+    <div>
+      <nav className="navbar navbar-dark">
         <div className='Logout_NewTask_Nav'>
           <h2>To-Do</h2>
-          <FontAwesomeIcon icon={faSignOutAlt} className="Icons" onClick={logoutUser}/>
+          <FontAwesomeIcon icon={faSignOutAlt} className='logout' onClick={logoutUser}/>
         </div>
       </nav>
-      <div className='addTaskComponent'>
-        <input type="text" placeholder='New Task' value={newTask} onChange={evnt => setNewTask(evnt.target.value)}/>
-        <button className='btn btn-success' onClick={addNewTask}>Add New Task</button>
-      </div>
-      <div>
-        <TasksList 
-          tasks={tasks}
-          updateTaskList={updateTaskListAction}/>
-      </div>
+      <div className='App'>
+      <header>
+        <form className='todo-form'>
+          <input type="text" placeholder='Enter new task' value={newTask} onChange={evnt => setNewTask(evnt.target.value)}/>
+          <button className='btn' type='submit' onClick={addNewTask}>Add</button>
+        </form>
+        <div>
+            <TasksList 
+              tasks={tasks}
+              updateTaskList={updateTaskListAction}/>
+        </div>
+      </header>
+    </div>
     </div>
   );
 }
