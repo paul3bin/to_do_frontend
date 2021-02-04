@@ -68,9 +68,7 @@ function App() {
           <button className='btn' type='submit' onClick={addNewTask}>Add</button>
         </form>
         <div>
-            <TasksList 
-              tasks={tasks}
-              updateTaskList={updateTaskListAction}/>
+            <TasksList tasks={tasks} updateTaskList={updateTaskListAction}/>
         </div>
       </header>
     </div>
