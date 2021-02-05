@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
-import {Link, withRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import { API } from '../api-service';
 
@@ -21,11 +21,7 @@ function Auth(){
     const loginClicked = () => {
 
         API.loginUser({username, password})
-        .then(resp => setToken('token', resp.token))
-        .catch(error => console.log(error))
-
-        API.loginUser({username, password})
-        .then(resp => setUserID('id', resp.id))
+        .then(resp => [setToken('token', resp.token), setUserID('id', resp.id)])
         .catch(error => console.log(error))
     }
 
@@ -37,7 +33,7 @@ function Auth(){
             setPassword('')
         }
         else{
-            if(token['token']) window.location.href = '/tasks';
+            if(token['token']) window.location.replace('/tasks');
         }
     }, [token])
 
