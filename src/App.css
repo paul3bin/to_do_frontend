@@ -89,6 +89,7 @@ body{
 .todo-form{
   background-color:rgb(60, 64, 116);
   border-radius: 10px;
+  margin: 10px 25px;
 }
 
 .todo-form input{
@@ -120,6 +121,7 @@ body{
 .navbar{
   margin: 10px 10px;
   background-color:rgb(60, 64, 116);
+  color: aqua
 }
 
 .logout{
