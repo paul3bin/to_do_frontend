@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react';
 import { useCookies } from 'react-cookie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import {Redirect} from 'react-router-dom'
 
 import { TasksList } from './components/list-tasks';
 import {API} from './api-service'
@@ -21,7 +20,7 @@ function App() {
   const [newTask, setNewTask] = useState('');
   
   useEffect(() => {
-    if(!token['token']) window.location.href = '/' 
+    if(!token['token']) window.location.replace('/')
   }, [token])
 
   const logoutUser = () => {
