@@ -1,41 +1,41 @@
 /* Login and Register Page CSS */
-.p-login-register{
+.p-login-register {
   font-size: 13px;
 }
 
-.Logout_NewTask_Nav{
+.Logout_NewTask_Nav {
   display: grid;
   align-items: center;
   grid-template-columns: auto auto auto;
 }
 
-.addTaskButton{
+.addTaskButton {
   right: 0px;
 }
 
-.login-body{
+.login-body {
   background-color: coral;
   padding-top: 25vh;
   min-height: 100vh;
 }
 
-form{
+form {
   background-color: white;
 }
 
-.form-container{
+.form-container {
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0px 0px 10px 0px;
 }
 
-button:disabled{
+button:disabled {
   cursor: not-allowed;
 }
 
 /* Landing Page CSS */
 
-.fa-sign-out-alt{
+.fa-sign-out-alt {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -43,7 +43,7 @@ button:disabled{
   cursor: pointer;
 }
 
-.Task-Item{
+.Task-Item {
   background-color: burlywood;
   height: 50px;
   margin: 20px auto;
@@ -54,61 +54,62 @@ button:disabled{
   border-radius: 5px;
 }
 
-.Task-Item p{
+.Task-Item p {
   padding: 13px;
   margin-left: 10px;
 }
 
-.Icons{
+.Icons {
   cursor: pointer;
   margin: 15px;
   margin-left: 10px;
 }
 
-.addTaskComponent{
+.addTaskComponent {
   display: grid;
   grid-template-columns: auto auto auto;
 }
 
-.navbar{
+.navbar {
   border-radius: 10px;
 }
 
-body{
+body {
   background-color: rgb(61, 56, 47);
 }
 
-.App{
-  background-color:rgb(60, 64, 116);
+.App {
+  background-color: rgb(60, 64, 116);
   min-height: 500px;
   width: 400px;
   margin: 66px auto;
   border-radius: 10px;
 }
 
-.todo-form{
-  background-color:rgb(60, 64, 116);
+.todo-form {
+  background-color: rgb(60, 64, 116);
   border-radius: 10px;
   margin: 10px 25px;
 }
 
-.todo-form input{
+.todo-form input {
   background-color: rgb(26, 22, 22);
-  color:white;
+  color: white;
   border: 0px;
   width: 200px;
   height: 50px;
   padding: 0px 20px;
   margin: 20px;
   border-radius: 10px;
-  font-size:18px;
+  font-size: 18px;
 }
 
-.todo-form input:focus, .todo-form button:focus{
+.todo-form input:focus,
+.todo-form button:focus {
   outline: none;
 }
 
-.todo-form button{
+.todo-form button {
   height: 50px;
   width: 80px;
   border-radius: 10px;
@@ -118,12 +119,12 @@ body{
   color: white;
 }
 
-.navbar{
+.navbar {
   margin: 10px 10px;
-  background-color:rgb(60, 64, 116);
-  color: aqua
+  background-color: rgb(60, 64, 116);
+  color: aqua;
 }
 
-.logout{
+.logout {
   cursor: pointer;
 }
