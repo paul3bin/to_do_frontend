@@ -8,6 +8,7 @@ import {CookiesProvider} from 'react-cookie';
 
 import {Auth} from './components/auth';
 import {RegisterUser} from './components/user_register';
+import {ProtectedRoute} from './ProtectedRoute';
 
 
 function Router(){
@@ -16,7 +17,8 @@ function Router(){
       <CookiesProvider>
         <BrowserRouter>
           <Route exact path="/" component={Auth}/>
-          <Route exact path="/tasks" component={App}/>
+          <ProtectedRoute exact path="/tasks" component={App}/>
+          {/* <Route exact path="/tasks" component={App}/> */}
           <Route exact path="/register-user" component={RegisterUser}/>
         </BrowserRouter>
       </CookiesProvider>
