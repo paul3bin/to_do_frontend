@@ -14,7 +14,8 @@
 }
 
 .login-body {
-  background-color: coral;
+  background-image: url('images/264-2648820_wood-wallpapers-hd-desktop-download-high-resolution-wooden.jpg');
+  /* background-color: coral; */
   padding-top: 25vh;
   min-height: 100vh;
 }
