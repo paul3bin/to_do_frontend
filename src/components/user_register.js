@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { API } from "../api-service";
 import { Link } from "react-router-dom";
-import { auth } from "../components/auth";
+
+import '../styles/user_register.css';
 
 function RegisterUser() {
   document.title = "Register User";
