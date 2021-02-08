@@ -3,6 +3,7 @@ import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 
 import { API } from "../api-service";
+import "../styles/auth.css";
 
 function Auth() {
   document.title = "Login";
@@ -41,18 +42,19 @@ function Auth() {
           <div className="col-12 col-sm-6 col-md-3">
             <form className="form-container">
               <h4 className="text-center fw-bold">Login</h4>
-              <div class="form-group">
+
+              <div className="form-group">
                 <input
+                  id="UserName"
                   type="email"
-                  class="form-control"
-                  id="username"
-                  placeholder="Enter username"
+                  className="form-control"
+                  placeholder="Enter Username"
                   value={username}
                   onChange={(evnt) => setUsername(evnt.target.value)}
                 />
               </div>
 
-              <div class="form-group">
+              <div className="form-group">
                 <input
                   type="password"
                   class="form-control"
@@ -66,7 +68,7 @@ function Auth() {
               <button
                 disabled={isDisabled}
                 type="submit"
-                class="btn btn-primary btn-block"
+                className="btn btn-primary btn-block"
                 onClick={loginClicked}
               >
                 Submit
