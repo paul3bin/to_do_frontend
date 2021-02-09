@@ -42,7 +42,7 @@ body {
 }
 
 .App {
-  background-color: rgb(60, 64, 116);
+  background-color: black;
   min-height: 500px;
   width: 400px;
   margin: 66px auto;
@@ -50,13 +50,13 @@ body {
 }
 
 .todo-form {
-  background-color: rgb(60, 64, 116);
+  background-color: black;
   border-radius: 10px;
   margin: 10px 25px;
 }
 
 .todo-form input {
-  background-color: rgb(26, 22, 22);
+  background-color: black;
   color: white;
   border: 0px;
   width: 200px;
@@ -65,6 +65,7 @@ body {
   margin: 20px;
   border-radius: 10px;
   font-size: 18px;
+  border: 1px solid white;
 }
 
 .todo-form input:focus,
@@ -77,17 +78,21 @@ body {
   width: 80px;
   border-radius: 10px;
   border: 0px;
-  background-color: rgb(202, 156, 24);
+  background-color: rgb(74, 74, 189);
   cursor: pointer;
   color: white;
 }
 
 .navbar {
   margin: 10px 10px;
-  background-color: rgb(60, 64, 116);
+  background-color: rgba(0,0,0,0.8);
   color: aqua;
+  position: static;
 }
-
+h2{
+  padding-top: 10px;
+}
 .logout {
   cursor: pointer;
+  margin-top: 13px;
 }
