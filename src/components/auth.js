@@ -37,50 +37,47 @@ function Auth() {
 
   return (
     <div className="login-body">
-      <div className="container-fluid">
-        <div className="row justify-content-center">
-          <div className="col-12 col-sm-6 col-md-3">
-            <form className="form-container">
-              <h4 className="text-center fw-bold">Login</h4>
-
-              <div className="form-group">
-                <input
-                  id="UserName"
-                  type="email"
-                  className="form-control"
-                  placeholder="Enter Username"
-                  value={username}
-                  onChange={(evnt) => setUsername(evnt.target.value)}
-                />
-              </div>
-
-              <div className="form-group">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Enter password"
-                  value={password}
-                  onChange={(evnt) => setPassword(evnt.target.value)}
-                />
-              </div>
-
-              <button
-                disabled={isDisabled}
-                type="submit"
-                className="btn btn-primary btn-block"
-                onClick={loginClicked}
-              >
-                Submit
-              </button>
-
-              <p className="p-login-register">
-                Don't have an account? Register{" "}
-                <Link to="/register-user">here</Link>.
-              </p>
-            </form>
+      <div className="login-box">
+        <h1>login</h1>
+        <form>
+         
+          <div className="input-box">
+            <input
+              type="text"
+              name="username"
+              value={username}
+              onChange={(evnt) => setUsername(evnt.target.value)}
+              required={true}
+            />
+            <label>Username</label>
           </div>
-        </div>
+         
+          <div className="input-box">
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={(evnt) => setPassword(evnt.target.value)}
+              required={true}
+            />
+            <label>Password</label>
+          </div>
+          
+          <button
+            disabled={isDisabled}
+            type="button"
+            className="btn btn-primary btn-block"
+            onClick={loginClicked}
+          >
+            Login
+          </button>
+
+          <p className="p-login-register">
+            Don't have an account? Register{" "}
+            <Link to="/register-user">here</Link>.
+          </p>
+        
+        </form>
       </div>
     </div>
   );
