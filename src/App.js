@@ -11,11 +11,8 @@ function App() {
   document.title = "Tasks";
 
   const [token, setToken, deleteToken] = useCookies(["token"]);
-
   const [userID, setUserID, deleteUserID] = useCookies(["id"]);
-
   const [tasks, setTasks] = useState([]);
-
   const [newTask, setNewTask] = useState("");
 
   useEffect(() => {
