@@ -1,35 +1,82 @@
-/* Login and Register Page CSS */
-.p-login-register {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.login-body{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.login-box{
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  background: rgba(0,0,0,0.8);
+  border-radius: 10px;
+  box-shadow: 0,0,10,0 black;
+} 
+
+.login-box h1{
+  margin-bottom: 30px;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.login-box .input-box{
+  position: relative;
+}
+
+.login-box .input-box input{
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  outline: none;
+}
+
+.login-box .input-box label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  transition: 0.5s;
+}
+
+.login-box .input-box input:focus ~ label,
+.login-box .input-box input:valid ~ label{
+  top: -20px;
+  left: 0;
+  color: rgb(74, 74, 189);
   font-size: 13px;
 }
 
-.Logout_NewTask_Nav {
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto auto auto;
+.login-box input[type="submit"]{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgb(61, 61, 187);
+  padding: 8px 16px;
+  border-radius: 5px;
 }
 
-.addTaskButton {
-  right: 0px;
-}
-
-.login-body {
-  background-image: url("../images/264-2648820_wood-wallpapers-hd-desktop-download-high-resolution-wooden.jpg");
-  /* background-color: coral; */
-  padding-top: 25vh;
-  min-height: 100vh;
-}
-
-form {
-  background-color: white;
-}
-
-.form-container {
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0px 0px 10px 0px;
-}
-
-button:disabled {
-  cursor: not-allowed;
+.p-login-register{
+  color: white;
+  padding-top: 10px;
 }
