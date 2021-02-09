@@ -18,7 +18,6 @@ function Router(){
         <BrowserRouter>
           <Route exact path="/" component={Auth}/>
           <ProtectedRoute exact path="/tasks" component={App}/>
-          {/* <Route exact path="/tasks" component={App}/> */}
           <Route exact path="/register-user" component={RegisterUser}/>
         </BrowserRouter>
       </CookiesProvider>
