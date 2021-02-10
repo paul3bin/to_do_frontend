@@ -1,40 +1,40 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.login-body{
+.login-body {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
-.login-box{
+.login-box {
   width: 400px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 50px;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  box-shadow: 0,0,10,0 black;
-} 
+  box-shadow: 0, 0, 10, 0 black;
+}
 
-.login-box h1{
+.login-box h1 {
   margin-bottom: 30px;
   color: white;
   text-align: center;
   text-transform: capitalize;
 }
 
-.login-box .input-box{
+.login-box .input-box {
   position: relative;
 }
 
-.login-box .input-box input{
+.login-box .input-box input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -47,7 +47,7 @@
   outline: none;
 }
 
-.login-box .input-box label{
+.login-box .input-box label {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,14 +59,14 @@
 }
 
 .login-box .input-box input:focus ~ label,
-.login-box .input-box input:valid ~ label{
+.login-box .input-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: rgb(74, 74, 189);
   font-size: 13px;
 }
 
-.login-box input[type="submit"]{
+.login-box input[type="submit"] {
   background: transparent;
   border: none;
   outline: none;
@@ -76,7 +76,7 @@
   border-radius: 5px;
 }
 
-.p-login-register{
+.p-login-register {
   color: white;
   padding-top: 10px;
 }
