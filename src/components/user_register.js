@@ -8,9 +8,7 @@ function RegisterUser() {
   document.title = "Register User";
 
   const [username, setUsername] = useState("");
-
   const [password, setPassword] = useState("");
-
   const [passwordReEnter, setPasswordReEnter] = useState("");
 
   const isDisabled =
@@ -27,14 +25,32 @@ function RegisterUser() {
   };
 
   const registerClicked = () => {
-    if (passwordCheck && passwordReEnterCheck) {
-      API.registerUser({ username, password }).catch((error) =>
-        console.log(error)
-      );
-      alert("New user registered. Now, login with the same credentials.");
-      window.location.href = "/";
+    if (username.length >= 4) {
+      if (passwordCheck && passwordReEnterCheck) {
+        API.registerUser({ username, password })
+          .then((resp) =>
+            resp.username[0] === "A user with that username already exists."
+              ? alert(
+                  "User already exists!",
+                  (setUsername(""), setPassword(""), setPasswordReEnter(""))
+                )
+              : alert(
+                  "New user registered. Now, login with the same credentials.",
+                  window.location.replace("/")
+                )
+          )
+          .catch((error) => console.log(error));
+      } else {
+        alert(
+          "Check your password and try again.",
+          (setUsername(""), setPassword(""), setPasswordReEnter(""))
+        );
+      }
     } else {
-      alert("Check your password and try again.");
+      alert(
+        "Username should be aleast 4 characters",
+        (setUsername(""), setPassword(""), setPasswordReEnter(""))
+      );
     }
   };
 
@@ -53,7 +69,7 @@ function RegisterUser() {
             />
             <label>Username</label>
           </div>
-          
+
           <div className="input-box">
             <input
               type="password"
