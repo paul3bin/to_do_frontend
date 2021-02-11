@@ -55,11 +55,11 @@ function RegisterUser() {
   };
 
   return (
-    <div className="login-body">
-      <div className="login-box">
+    <div className="register-body">
+      <div className="register-box">
         <h1>register</h1>
         <form>
-          <div className="input-box">
+          <div className="reg-input_box">
             <input
               type="text"
               name="username"
@@ -70,7 +70,7 @@ function RegisterUser() {
             <label>Username</label>
           </div>
 
-          <div className="input-box">
+          <div className="reg-input_box">
             <input
               type="password"
               name="password"
@@ -81,7 +81,7 @@ function RegisterUser() {
             <label>Password</label>
           </div>
 
-          <div className="input-box">
+          <div className="reg-input_box">
             <input
               type="password"
               name="password"
