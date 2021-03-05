@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { API } from "../api-service";
+
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "../styles/user_register.css";
 
@@ -30,13 +33,27 @@ function RegisterUser() {
         API.registerUser({ username, password })
           .then((resp) =>
             resp.username[0] === "A user with that username already exists."
-              ? alert(
+              ? toast.error(
                   "User already exists!",
+                  {
+                    position: toast.POSITION.TOP_RIGHT,
+                  },
                   (setUsername(""), setPassword(""), setPasswordReEnter(""))
                 )
-              : alert(
+              : // alert(
+                //     "User already exists!",
+                //     (setUsername(""), setPassword(""), setPasswordReEnter(""))
+                //   )
+                // alert(
+                //   "New user registered. Now, login with the same credentials.",
+                //   window.location.replace("/")
+                // )
+                toast.success(
                   "New user registered. Now, login with the same credentials.",
-                  window.location.replace("/")
+                  {
+                    position: toast.POSITION.TOP_RIGHT,
+                  },
+                  (setUsername(""), setPassword(""), setPasswordReEnter(""))
                 )
           )
           .catch((error) => console.log(error));

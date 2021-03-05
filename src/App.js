@@ -1,12 +1,16 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
+
 import { useCookies } from "react-cookie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { TasksList } from "./components/list-tasks";
 import { API } from "./api-service";
 
+toast.configure();
 function App() {
   document.title = "Tasks";
 
@@ -35,14 +39,21 @@ function App() {
 
   const addNewTask = () => {
     if (newTask.length > 50) {
-      alert("Task length cannot be greater than 50.");
+      toast.warn("Task length cannot be greater than 50.", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     } else if (newTask.length === 0) {
-      alert("Empty task cannot be added!");
+      toast.warn("Empty task cannot be added!", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     } else {
       API.addTask({ task: newTask, user: userID["id"] }, token["token"])
         .then((resp) => setTasks([...tasks, resp]))
         .catch((error) => console.log(error));
       setNewTask("");
+      toast.success("Task added!", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     }
   };
 
@@ -67,7 +78,7 @@ function App() {
               value={newTask}
               onChange={(evnt) => setNewTask(evnt.target.value)}
             />
-            <button className="btn" type="submit" onClick={addNewTask}>
+            <button className="btn" type="button" onClick={addNewTask}>
               Add
             </button>
           </form>

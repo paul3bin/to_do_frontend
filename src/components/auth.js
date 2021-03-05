@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { API } from "../api-service";
 import "../styles/auth.css";
@@ -26,7 +29,9 @@ function Auth() {
 
   useEffect(() => {
     if (token["token"] === "undefined") {
-      alert("Wrong username or password.");
+      toast.error("Wrong username or password.", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
       setToken("token", "");
       setUsername("");
       setPassword("");
@@ -40,7 +45,6 @@ function Auth() {
       <div className="login-box">
         <h1>login</h1>
         <form>
-         
           <div className="input-box">
             <input
               type="text"
@@ -51,7 +55,7 @@ function Auth() {
             />
             <label>Username</label>
           </div>
-         
+
           <div className="input-box">
             <input
               type="password"
@@ -62,7 +66,7 @@ function Auth() {
             />
             <label>Password</label>
           </div>
-          
+
           <button
             disabled={isDisabled}
             type="button"
@@ -76,7 +80,6 @@ function Auth() {
             Don't have an account? Register{" "}
             <Link to="/register-user">here</Link>.
           </p>
-        
         </form>
       </div>
     </div>
